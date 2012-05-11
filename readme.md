@@ -7,7 +7,7 @@ Text file browsing and converter service.
 + Browse text files and normalize multiple input formats (currently ships with filters for [Markdown](http://daringfireball.net/projects/markdown/syntax), [Textile](http://textile.thresholdstate.com/), plain text and HTML)
 + Embed snippets from external files
 + Plugin-architecture for custom input and output filters
-+ Collection handling (filter, search and sort)
++ Handle collections of files (filter, search and sort)
 
 ## Installation
 
@@ -271,6 +271,8 @@ Configuration
     
     $directory = new ScribbleDirWithFiles($config);
 
+Here we map input and output filters to the file suffix.
+
 ### Filter Config For Markdown
 
     $markdownFiltersConfig = array(
@@ -376,7 +378,6 @@ List all tags from all scribbles
 
 ## Dependencies
 
-+ [Composer](https://github.com/composer/composer)
 + [Doctrine2 Common](https://github.com/doctrine/common)
 + [Php Markdown](https://github.com/michelf/php-markdown/)
 + [Textile](https://github.com/netcarver/textile)
