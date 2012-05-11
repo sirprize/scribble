@@ -17,6 +17,10 @@ Text file browsing and converter service.
 + `cd tests`
 + `phpunit` (verify installation)
 
+## Getting Started
+
+Get [Scribbled](https://github.com/sirprize/scribbled) for a full implementation of Scribble.
+
 ## Basic Usage
 
 Loading a Markdown file:
