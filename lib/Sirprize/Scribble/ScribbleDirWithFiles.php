@@ -91,7 +91,7 @@ class ScribbleDirWithFiles implements ScribbleDirInterface
             }
             
             $scribble
-                ->setSlug($fileinfo->getFilename())
+                ->setSlug(preg_replace('/\..*$/', '', $fileinfo->getFilename()))
                 #->setPath($this->path.'/'.$fileinfo->getFilename())
             ;
 
