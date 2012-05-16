@@ -20,7 +20,7 @@ class ScribbleDirWithFiles
 {
 
     protected $dir = null;
-    protected $path = null;
+    #protected $path = null;
     protected $suffices = null;
     protected $suffixConfigs = null;
     protected $inputFilters = null;
@@ -44,9 +44,9 @@ class ScribbleDirWithFiles
             return $config[$id];
         };
         
-        $this->dir = $getConfigItem($config, 'dir', null, null, true);
-        $this->path = $getConfigItem($config, 'path', null, null, true);
-        $suffices = $getConfigItem($config, 'suffices', null, null, true);
+        $this->dir = $getConfigItem($config, 'dir', null, true);
+        #$this->path = $getConfigItem($config, 'path', null, true);
+        $suffices = $getConfigItem($config, 'suffices', null, true);
 
         foreach($suffices as $suffix => $suffixConfig)
         {
@@ -95,7 +95,7 @@ class ScribbleDirWithFiles
             
             $scribble
                 ->setSlug($fileinfo->getFilename())
-                ->setPath($this->path.'/'.$fileinfo->getFilename())
+                #->setPath($this->path.'/'.$fileinfo->getFilename())
             ;
 
             $this->scribbles->add($scribble);
