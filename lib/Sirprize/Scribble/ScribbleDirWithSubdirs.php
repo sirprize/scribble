@@ -44,9 +44,9 @@ class ScribbleDirWithSubdirs
             return $config[$id];
         };
         
-        $this->dir = $getConfigItem($config, 'dir', null, null, true);
-        $this->path = $getConfigItem($config, 'path', null, null, true);
-        $files = $getConfigItem($config, 'files', null, null, true);
+        $this->dir = $getConfigItem($config, 'dir', null, true);
+        $this->path = $getConfigItem($config, 'path', null, true);
+        $files = $getConfigItem($config, 'files', null, true);
 
         foreach($files as $file => $fileConfig)
         {
