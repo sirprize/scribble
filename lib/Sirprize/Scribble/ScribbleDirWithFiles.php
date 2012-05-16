@@ -8,15 +8,12 @@
 
 namespace Sirprize\Scribble;
 
-use Sirprize\Scribble\ScribbleCollection;
-use Sirprize\Scribble\ScribbleException;
-
 /**
  * ScribbleDirWithFiles loads scribbles.
  *
  * @author Christian Hoegl <chrigu@sirprize.me>
  */
-class ScribbleDirWithFiles
+class ScribbleDirWithFiles implements ScribbleDirInterface
 {
 
     protected $dir = null;
